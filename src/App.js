@@ -7,6 +7,7 @@ import ItemScreen from './screen/ItemScreen';
 import data from './data/dataList';
 import GridsScreen from './screen/GridsScreen';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Home from './components/Home';
 
 
 const theme = createMuiTheme({
@@ -27,6 +28,7 @@ function App() {
 
     <ThemeProvider theme = {theme}>
       <Paper>
+      <Home/>
         <Container maxWidth="md">
           <Router>
             <Switch>

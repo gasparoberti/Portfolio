@@ -1,8 +1,6 @@
 import { Card, CardContent, Grid, Typography } from '@material-ui/core';
 import React from 'react';
 import Carrousel from '../components/Carrousel';
-import image from '../images/contemplative-reptile.jpg';
-import image2 from '../images/reptile-2042906_1920.jpg';
 
 
 function ItemScreen({item}) {
