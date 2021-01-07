@@ -30,15 +30,15 @@ function App() {
         <Container maxWidth="md">
           <Router>
             <Switch>
-              {/* <Route exact path="/">
-                <Carrousel/>
-              </Route> */}
               <Route path="/list">
                 <GridsScreen/>
               </Route>
-              <Route path="/item">
-                <ItemScreen item={data[2]}/>
-              </Route>
+
+              {data.map(item => 
+                <Route path={`/item/${item.id}`}>
+                  <ItemScreen item={item}/>
+                </Route>
+              )}
 
             </Switch>
             

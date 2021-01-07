@@ -13,10 +13,10 @@ function ItemScreen({item}) {
                         <Carrousel/>
                     </Grid>
                     <Grid item md={4}>
-                        <Typography variant="h4" color="initial">
+                        <Typography variant="h6" color="initial">
                             {item.title}
                         </Typography>
-                        <Typography variant="h6" color="initial">
+                        <Typography variant="body2" color="initial">
                             {item.desc}
                         </Typography>
 
