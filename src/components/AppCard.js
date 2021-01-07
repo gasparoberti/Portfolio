@@ -5,7 +5,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import {BrowserRouter as Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
   root: {
@@ -21,7 +21,7 @@ export default function AppCard({id, title, desc, img}) {
   const classes = useStyles();
 
   return (
-    <Link to={`/item/${id}`}>
+    <Link to={`/item/${id}`} style={{ color: 'inherit', textDecoration: 'inherit' }}>
       <CardActionArea>
         <Card className={classes.root}>
         
