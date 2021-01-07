@@ -1,5 +1,6 @@
-import { Card, CardContent, CardMedia, Grid, Typography } from '@material-ui/core';
+import { Card, CardContent, Grid, Typography } from '@material-ui/core';
 import React from 'react';
+import Carrousel from '../components/Carrousel';
 // import image from '../images/contemplative-reptile.jpg';
 
 function ItemScreen({item}) {
@@ -8,8 +9,8 @@ function ItemScreen({item}) {
             <CardContent>
                 <Grid container spacing={3}>
                     <Grid item md={8}>
-                        <CardMedia component="img" image={item.img}/>
-                        
+                        {/* <CardMedia component="img" image={item.img}/> */}
+                        <Carrousel/>
                     </Grid>
                     <Grid item md={4}>
                         <Typography variant="h4" color="initial">

@@ -30,6 +30,9 @@ function App() {
         <Container maxWidth="md">
           <Router>
             <Switch>
+              {/* <Route exact path="/">
+                <Carrousel/>
+              </Route> */}
               <Route path="/list">
                 <GridsScreen/>
               </Route>
