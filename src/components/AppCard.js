@@ -4,44 +4,58 @@ import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
+import AlertDialogSlide from './AlertDialogSlide';
 import Typography from '@material-ui/core/Typography';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
   root: {
-    width: 300,
-    height: 400,
+    width: 250,
+    // height: 400,
   },
   media: {
-    height: 200,
+    height: 250,
   },
 });
 
-export default function AppCard({id, title, desc, img}) {
+export default function AppCard({item}) {
   const classes = useStyles();
 
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
-    <Link to={`/item/${id}`} style={{ color: 'inherit', textDecoration: 'inherit' }}>
-      <CardActionArea>
+    <div>
+
+    {/* // <Link to={`/item/${id}`} style={{ color: 'inherit', textDecoration: 'inherit' }}> */}
+      <CardActionArea onClick = { handleClickOpen }>
         <Card className={classes.root}>
         
           <CardMedia
             className={classes.media}
-            image={img}
-            title="Contemplative Reptile"
+            image={item.img[0]}
+            title={item.title}
           />
-          <CardContent>
+          {/* <CardContent>
             <Typography gutterBottom variant="h6" component="h2">
-              {title}
+              {item.title}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
-              {desc}
+              {item.desc}
             </Typography>
-          </CardContent>
+          </CardContent> */}
         </Card>
       </CardActionArea>
-    </Link>
-    
-    
+    {/* // </Link> */}
+
+    <AlertDialogSlide open = {open} handleClose = {handleClose} item = {item}/>
+    </div>
   );
 }

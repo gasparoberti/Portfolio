@@ -15,7 +15,8 @@ function GridsScreen(props) {
             >
             {dataList.map(item=>
                 <Grid item>
-                    <AppCard id={item.id} title={item.title} desc={item.desc} img={item.img[0]}/>
+                    {/* <AppCard id={item.id} title={item.title} desc={item.desc} img={item.img[0]}/> */}
+                    <AppCard item = {item}/>
                 </Grid>
             )}
             </Grid>
