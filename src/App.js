@@ -1,16 +1,11 @@
 import './App.css';
 import { Container, createMuiTheme, Paper, ThemeProvider, Typography} from '@material-ui/core';
-import purple from '@material-ui/core/colors/purple';
-import green from '@material-ui/core/colors/green';
-
-// import ItemScreen from './screen/ItemScreen';
-// import data from './data/dataList';
 import GridsScreen from './screen/GridsScreen';
-// import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Home from './components/Home';
 import HideAppBar from './components/HideAppBar';
 import { blueGrey, grey } from '@material-ui/core/colors';
 import Section from './components/Section';
+import Footer from './components/Footer';
 
 
 const theme = createMuiTheme({
@@ -47,6 +42,10 @@ function App() {
       </div>
         <Container maxWidth="md">
           
+          <div id="skills">
+            <Section title="Skills"/>
+          </div>
+
           <div id="portfolio">
             <Section title="Portfolio"/>
             <GridsScreen/>
@@ -57,6 +56,9 @@ function App() {
               <ItemScreen item={item}/>
               </Route>
             )} */}
+          
+
+            <Footer/>
           
         </Container>
 

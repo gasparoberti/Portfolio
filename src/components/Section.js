@@ -1,4 +1,4 @@
-import { Grid, Typography } from '@material-ui/core';
+import { Box, Grid, Typography } from '@material-ui/core';
 import React from 'react';
 
 function Section(props) {
@@ -9,7 +9,11 @@ function Section(props) {
                 justify="center"
                 alignItems="center"
             >
-                <Typography variant="h3" component="h2">{props.title} </Typography>
+                <Typography variant="h3" component="h3">
+                    <Box fontWeight="fontWeightBold">
+                        {props.title} 
+                    </Box>
+                </Typography>
             </Grid>
         </div>
     );

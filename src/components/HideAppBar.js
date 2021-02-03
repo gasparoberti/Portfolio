@@ -39,7 +39,6 @@ export default function HideAppBar(props) {
       <HideOnScroll {...props}>
         <AppBar color="primary">
           <Toolbar>
-            {/* <Typography variant="h6">Scroll to Hide App Bar</Typography> */}
             <Grid 
                 container
                 spacing={3}
@@ -48,9 +47,6 @@ export default function HideAppBar(props) {
             >
                 <Link activeClass="active" to="home" spy={true} smooth={true} offset={50} duration={500}>
                     <Button color="inherit">Home</Button>
-                </Link>
-                <Link activeClass="active" to="sobremi" spy={true} smooth={true} offset={50} duration={500}>
-                    <Button color="inherit">Sobre Mí</Button>
                 </Link>
                 <Link activeClass="active" to="skills" spy={true} smooth={true} offset={50} duration={500}>
                     <Button color="inherit">Skills</Button>
