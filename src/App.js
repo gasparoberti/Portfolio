@@ -1,8 +1,7 @@
 import './App.css';
-import { Container, createMuiTheme, Paper, ThemeProvider, Typography} from '@material-ui/core';
+import { Container, createMuiTheme, Paper, ThemeProvider} from '@material-ui/core';
 import GridsScreen from './screen/GridsScreen';
 import Home from './components/Home';
-import HideAppBar from './components/HideAppBar';
 import { blueGrey, grey } from '@material-ui/core/colors';
 import Section from './components/Section';
 import Footer from './components/Footer';
@@ -36,7 +35,6 @@ function App() {
 
     <ThemeProvider theme = {theme}>
       <Paper>
-      <HideAppBar/>
       <div id="home">
         <Home/>
       </div>

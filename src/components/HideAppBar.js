@@ -37,7 +37,7 @@ export default function HideAppBar(props) {
     <React.Fragment>
       <CssBaseline />
       <HideOnScroll {...props}>
-        <AppBar color="primary">
+        <AppBar style={{width:'100%'}} color="primary">
           <Toolbar>
             <Grid 
                 container
@@ -45,15 +45,15 @@ export default function HideAppBar(props) {
                 justify="center"
                 alignItems="center"
             >
-                <Link activeClass="active" to="home" spy={true} smooth={true} offset={50} duration={500}>
-                    <Button color="inherit">Home</Button>
-                </Link>
-                <Link activeClass="active" to="skills" spy={true} smooth={true} offset={50} duration={500}>
-                    <Button color="inherit">Skills</Button>
-                </Link>
-                <Link activeClass="active" to="portfolio" spy={true} smooth={true} offset={50} duration={500}>
-                    <Button color="inherit">Portfolio</Button>
-                </Link>
+              <Link activeClass="active" to="home" spy={true} smooth={true} offset={50} duration={500}>
+                  <Button color="inherit">Home</Button>
+              </Link>
+              <Link activeClass="active" to="skills" spy={true} smooth={true} offset={50} duration={500}>
+                  <Button color="inherit">Skills</Button>
+              </Link>
+              <Link activeClass="active" to="portfolio" spy={true} smooth={true} offset={50} duration={500}>
+                  <Button color="inherit">Portfolio</Button>
+              </Link>
                 
             </Grid>
           </Toolbar>

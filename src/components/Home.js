@@ -2,6 +2,7 @@ import { Container, Grid, Typography } from '@material-ui/core';
 import React from 'react';
 
 import backgroundImage from '../images/coast-5870088_1920.jpg'
+import HideAppBar from './HideAppBar';
 import IconButtons from './IconButtons';
 
 const styles={    
@@ -18,6 +19,7 @@ function Home(props) {
     return (
         <div>
             <div style={styles.paperContainer}>
+                <HideAppBar/>
                     <Grid container spacing={4} direction="column" justify='center' alignItems='center'>
                         <Grid item>
                             <Typography variant="h2" component="h2">
